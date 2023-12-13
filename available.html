@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Wallet - Payday Loan Service Template</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
+    <meta name="description" content="This is meta description" />
+    <meta name="author" content="Themefisher" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="wallet" />
+
+    <!-- # Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- # CSS Plugins -->
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/font-awesome/fontawesome.min.css" />
+    <link rel="stylesheet" href="plugins/font-awesome/brands.css" />
+    <link rel="stylesheet" href="plugins/font-awesome/solid.css" />
+
+    <!-- # Main Style Sheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <style>
+    .mm {
+      background-color: #032b56;
+    }
+    .top-sec .cc p,
+    .top-sec .cc {
+      font-size: 11px;
+    }
+    .top-sec span {
+      color: #9aaabb;
+    }
+    .ccc {
+      font-size: 11px;
+    }
+    .ccc:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    @media (max-width: 1200px) {
+      .cbcb {
+        display: none !important;
+      }
+    }
+    .logout {
+      border: none !important;
+    }
+  </style>
+  <body>
+    <div class="mm">
+      <div class="container top-sec">
+        <div class="row align-items-center py-2">
+          <div class="col-6 cbcb col-xl-6 cc">
+            <p style="color: #fee023; margin: 0px">
+              <i class="fa-solid fa-circle-exclamation"></i> Enjoy Our Hot
+              Offers! <span>Call for Free Estimate: +55 654 541 17</span>
+            </p>
+          </div>
+          <div class="col-6 cbcb col-xl-2 cc">
+            <i class="fa-solid fa-envelope" style="color: #fee023"></i> Email:
+            jamadar@gmail.com
+          </div>
+          <div class="col-6 col-xl-3 cc">
+            <i class="fa-solid fa-clock" style="color: #fee023"></i> Working
+            Hours: Mon-Fri: 8am - 7pm
+          </div>
+          <div class="col-6 col-xl-1 text-end ccc">
+            <a href="login&signup.html" style="color: #888888" id="showusername"
+              >welcome
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- navigation -->
+    <header class="navigation bg-tertiary">
+      <nav class="navbar navbar-expand-xl navbar-light text-center py-3">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              loading="prelaod"
+              decoding="async"
+              class="img-fluid"
+              width="160"
+              src="images/logo.png"
+              alt="Wallet"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="available.html">available</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="userprofile.html">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">logout</a>
+              </li>
+            </ul>
+            <!-- <button type="submit" class="logout" onclick="clear()">
+              logout
+            </button> -->
+            <!-- <a href="login&signup.html" class="btn btn-primary ms-2 ms-lg-3"
+              >Login / Signup</a -->
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- /navigation -->
+
+    <div>
+      <table id="myTable">
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>User Email</th>
+            <th>Phone Number</th>
+            <th>Password</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- # JS Plugins -->
+    <script>
+      var adminuser = 'admin';
+      document.getElementById('showusername').innerHTML = adminuser;
+    </script>
+    <script>
+      var tableRef = document.getElementById('myTable');
+      var data = JSON.parse(localStorage.getItem('jamadaarData'));
+      for (var index = 0; index < data.length; index++) {
+        const row = data[index];
+        console.log(row);
+        const tr = tableRef.insertRow();
+        tr.innerHTML = `<td>${row.username}</td><td>${row.email}</td><td>${row.number}</td><td>${row.password}</td>`;
+      }
+    </script>
+    <script src="signup.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/scrollmenu/scrollmenu.min.js"></script>
+
+    <!-- Main Script -->
+
+    <script>
+      document.getElementById('showusername').innerHTML =
+        localStorage.localUsername;
+    </script>
+    <script src="logout.js"></script>
+  </body>
+</html>
